@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+
+
+@Html.Partial("_Login")
+<div style="margin-top: 30px; font-size: 22px;">
+    Let's
+
+    <a data-toggle="modal" data-target="#_Login">
+        Login
+    </a>
+    to get discounts!
+</div>
+
+@Html.Partial("_Add")
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#_add">Add +</button>

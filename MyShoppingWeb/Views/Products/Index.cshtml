@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MyShoppingWeb.Models.ProductVM>
+    @using MyShoppingWeb.Models
+@{
+    MyShoppingWebDbContext db = new MyShoppingWebDbContext();
+    ViewBag.Title = "Index";
+
+
+}
+
+<h2>Index</h2>
+<form method="get" action="@Url.Action("Index")">
+    <input name="kw" placeholder="press kw ..." value="@ViewBag.Kw" />
+    <select name="cateid">
+        <option value="">Chọn</option>
+        @{
+            
+            foreach (var item in db.Categories)
+            {
+                string se = item.Id == ViewBag.Cateid ? "selected" : "";
+                <option @se value="@item.Id">@item.CategoryName</option>
+            }
+        }
+    </select>
+    <select id="sortby" name="sortby">
+        <option value="">Chọn</option>
+        <option value="name_asc">A-Z</option>
+        <option value="name_desc">Z-A</option>
+    </select>
+    <button type="submit" class="btn btn-success btn-mid">Filter</button>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#sortby option[value="@ViewBag.SortBy"]').attr("selected","selected");
+    })
+</script>
+
+<div style="padding:50px;padding-left:100px">
+    @foreach (var item in Model)
+    {
+        <div>@item.ProductName</div>
+    }
+</div>

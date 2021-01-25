@@ -1,0 +1,90 @@
+﻿@model MyShoppingWeb.Models.OrderDetails
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div style="display: flex" class="row">
+
+    <div class="col-4">
+        <h4>Orders</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Orders.CustomerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Orders.CustomerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Orders.CustomerEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Orders.CustomerEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Orders.CustomerAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Orders.CustomerAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Orders.CustomerPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Orders.CustomerPhone)
+            </dd>
+
+        </dl>
+        <p>
+            @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+            @Html.ActionLink("Back to List", "Index", "Orders")
+        </p>
+    </div>
+
+    <div class="col-8">
+        <h4>Order Detail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Products.ProductName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Products.ProductName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnitPrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+
+
+
+        </dl>
+    </div>
+</div>

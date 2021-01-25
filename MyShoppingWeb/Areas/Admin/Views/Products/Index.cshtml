@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MyShoppingWeb.Models.Products>
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Products Management</h2>
+
+<button onclick="location.href='@Url.Action("Create")'">Create</button>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product Info</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model)
+            {
+                string src = "";
+
+                if (!string.IsNullOrEmpty(item.ImgUrl))
+                {
+                    src = "/data/products/" + item.Id + "/" + item.ImgUrl;
+                }
+                else
+                {
+                    src = "https://www.viettablet.com/images/companies/1/anh3/galaxy-s7-edge-01.jpg";
+                }
+                <tr>
+
+                    <td>
+                        <img src="@src" style="width:100px" />
+                    </td>
+                    <td>
+                        <div>#ID: @item.Id</div>
+                        <div>@item.ProductName</div>
+                        <div>$@item.UnitPrice.ToString("N2")</div>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+

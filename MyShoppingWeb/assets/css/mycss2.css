@@ -1,0 +1,95 @@
+﻿.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+/*hover sort*/
+.dropbtn12 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown12 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content12 {
+    /*display: none;*/
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.al{
+    color:aqua
+}
+.dropdown-content12 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content12 a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown12:hover .dropdown-content12 {
+    display: block;
+}
+
+.dropdown12:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*input cursor*/
+
+.New_Cursor {
+    position: relative;
+}
+
+.New_Cursor i {
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    background-color: gray;
+    left: 5px;
+    top: 10%;
+    animation-name: blink;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+
+.New_Cursor input:focus + i {
+    display: none;
+    border: none;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.rq-form-element {
+    border: transparent;
+}
+
+/*chinh the a*/
+.abc123 {
+    cursor: pointer;
+    color: red;
+    font-weight: 600
+}
+
