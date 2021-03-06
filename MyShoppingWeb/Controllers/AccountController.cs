@@ -129,5 +129,35 @@ namespace MyShoppingWeb.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Login");
         }
+
+
+        //[HttpGet]
+        //public ActionResult tesst(string ProductName, double Price, List<int> ListCategoryId)
+        //{
+        //    Products p = new Products
+        //    {
+        //        ProductName = ProductName,
+        //        UnitPrice = Price
+        //    };
+        //    db.Products.Add(p);
+        //    db.SaveChangesAsync();
+        //    foreach (var item in ListCategoryId)
+        //    {
+        //        ProductCategories pc = new ProductCategories
+        //        {
+        //            ProductId = p.Id,
+        //            CategoryId = item
+        //        };
+        //        // db.ProductCategories.add(pc);
+        //    }
+        //    db.SaveChangesAsync();
+        //    return RedirectToAction("Login");
+        //}
+        //class ProductCategories
+        //{
+        //    public int Id { get; set; }
+        //    public int ProductId {get;set;}
+        //    public int CategoryId { get; set; }
+        //}
     }
 }

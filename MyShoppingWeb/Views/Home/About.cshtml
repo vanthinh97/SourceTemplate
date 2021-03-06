@@ -1,5 +1,4 @@
-﻿@model MyShoppingWeb.Models.TotalCheckoutVM
-@{
+﻿@{
     ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
@@ -7,11 +6,21 @@
 
 <p>Use this area to provide additional information.</p>
 <div>
-    @foreach (var item in Model.lstProduct)
-    {
-        <div>@item.ProductName </div>
-    }
+
 </div>
 <div>
-    @Model.AllTotal
+    <select>
+        <option>ds</option>
+        <option>ds</option>
+        <option>ds</option>
+    </select>
+
+    <select multiple name="ListCategoryId">
+        <option>typwwww</option>
+        <option>typwwww</option>
+        <option>typwwww</option>
+    </select>
+
+    <input type="checkbox" name="ListCategoryId[]" /> Aos thun
+    <input type="checkbox" name="ListCategoryId[]" /> Ao Nam
 </div>
